@@ -1,0 +1,18 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js"></script>
+<p id="output"></p>
+<button onclick="a()">decode</button>
+<script>
+var d = "U2FsdGVkX1/mrxye9SFZ/TG/cNA1yb/a/lVwq8ap1IlI3S5vCFmz7uVLAU0GZYczPjfy+OZKQH00ALQhh6KoO2DQJ+swVpnhscTaM/UT1A3rCbmFxt5h0kdgRTWZoSZtiTbj0z/UEY3CE8K8UKjVArbG2vWw70j/kw9nxhQ6zwQ=";
+function a() {
+  var decr = null;
+  try {
+
+    decr = CryptoJS.AES.decrypt(data, key);
+    decr = decr.toString(CryptoJS.enc.Utf8) + "<br/>^ next step, but the thing above you need to decode before you can do that. hint: base (8*8)";
+  } catch (e) {
+    decr = "wrong key."
+  }
+  document.getElementById("output").innerHTML = decr;
+}
+</script>
