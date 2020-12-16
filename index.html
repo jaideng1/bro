@@ -15,8 +15,14 @@
     } else {
       key = document.getElementById("keyele").innerHTML;
     }
-    var decr = CryptoJS.AES.decrypt(data, key);
-    decr = decr.toString(CryptoJS.enc.Utf8);
+    var decr = null;
+    try {
+    
+      decr = CryptoJS.AES.decrypt(data, key);
+      decr = decr.toString(CryptoJS.enc.Utf8);
+    } catch (e) {
+      decr = "wrong key."
+    }
     
     document.getElementById("output").innerHTML = decr;
   }
