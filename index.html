@@ -1,0 +1,26 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js"></script>
+<p id="output"></p>
+<p id="keyele"></p>
+<button onclick="unencrypt()">unencrypt</button>
+<script>
+  var data = "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";
+  function unencrypt() {
+    let key = "";
+    if (document.getElementById("keyele").innerHTML.length < 1) {
+      key = prompt("Key to use? (Exit by leaving it blank)");
+      if (key.length < 1) {
+        return;
+      }
+    } else {
+      key = document.getElementById("keyele").innerHTML;
+    }
+    var decr = CryptoJS.AES.decrypt(data, key);
+    decr = decr.toString(CryptoJS.enc.Utf8);
+    
+    document.getElementById("output").innerHTML = decr;
+  }
+  
+</script>
+
+
